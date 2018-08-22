@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 import Burger from '../../Burger/Burger';
 import Button from '../../UI/Button/Button';
@@ -14,9 +15,11 @@ const checkoutSummary = (props) => {
             <Button 
                 btnType="Danger"
                 clicked>CANCEL</Button>
+            <Link to="/Checkout">
             <Button 
                 btnType="Success"
-                clicked>CONTINUE</Button>
+                clicked
+                to="/Checkout">CONTINUE</Button></Link>
         </div>
     );
 }
