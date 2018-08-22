@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 import Aux from '../../../hoc/ReactAux/ReactAux';
 import Button from '../../UI/Button/Button';
@@ -22,7 +23,9 @@ const orderSummary = (props) => {
             <p><strong>Total Price:</strong> {props.price.toFixed(2)}</p>
             <p>Continue to checkout?</p>
             <Button btnType="Danger" clicked={props.purchaseCancelled}>CANCEL</Button>
-            <Button btnType="Success" clicked={props.purchaseContinued}>CONTINUE</Button>
+            <Link to="/Checkout">
+                <Button btnType="Success" clicked={props.purchaseContinued}>CONTINUE</Button>
+            </Link>  
         </Aux>
     )
 };
